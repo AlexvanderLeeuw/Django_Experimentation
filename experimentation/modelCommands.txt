@@ -20,9 +20,19 @@ for x in taskList:
 
 #For updating a task in the database. Make sure to fill in the info correctly.
 #Replace "?" with the position of your task in the database, aka the id reduced by one. 
-x = Task.objects.all()[?]
+task = Task.objects.all()[?]
 #Check to make sure you selected the correct task and you don't accidentally alter a different once.
-x.taskName
+task.taskName
 #Replace "taskName" with the field you intend to change if it's a different one and then fill in a value.
-x.taskName = 
-x.save()
+task.taskName = 
+task.save()
+
+#For deleting a task from the database.
+#Filler task that can be added just to test if the deletion works
+task = Task(taskName='NoTask', taskDescription='How did this get in here?', soloTask=False, taskLocation='Nowhere', taskDate='2026-11-1')
+#Replace "?" with the position of your task in the database, aka the id reduced by one. 
+task = Task.objects.all()[?]
+#Check to make sure you selected the correct task and you don't accidentally alter a different once.
+task.taskName
+#actually delete the task
+task.delete()
