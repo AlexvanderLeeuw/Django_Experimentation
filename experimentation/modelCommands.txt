@@ -17,3 +17,12 @@ task1 = Task(taskName='', taskDescription='', soloTask=, taskLocation='', taskDa
 taskList = [task0, task1]
 for x in taskList:
     x.save()
+
+#For updating a task in the database. Make sure to fill in the info correctly.
+#Replace "?" with the position of your task in the database, aka the id reduced by one. 
+x = Task.objects.all()[?]
+#Check to make sure you selected the correct task and you don't accidentally alter a different once.
+x.taskName
+#Replace "taskName" with the field you intend to change if it's a different one and then fill in a value.
+x.taskName = 
+x.save()
