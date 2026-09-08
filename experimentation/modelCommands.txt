@@ -1,0 +1,19 @@
+#Commands to enter into the terminal to access and modify the tasks in the database.
+#To set up the terminal.
+python manage.py shell
+from experimentation.models import Task
+
+#To see the current tasks in the database.
+Task.objects.all().values()
+
+#For adding a single task. Make sure to actually fill in all the empty fields.
+task = Task(taskName='', taskDescription='', soloTask=, taskLocation='', taskDate='')
+task.save()
+
+#For adding multiple tasks at once. If adding more than two, make sure to properly
+#increment and add them all to the list
+task0 = Task(taskName='', taskDescription='', soloTask=, taskLocation='', taskDate='')
+task1 = Task(taskName='', taskDescription='', soloTask=, taskLocation='', taskDate='')
+taskList = [task0, task1]
+for x in taskList:
+    x.save()
