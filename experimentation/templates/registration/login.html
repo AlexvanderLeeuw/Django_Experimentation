@@ -3,7 +3,7 @@
 {% block content %}
 
 {% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
+<p>Something went wrong with your logout attempt. Please try again.</p>
 {% endif %}
 
 {% if next %}
@@ -32,7 +32,5 @@
 <input type="hidden" name="next" value="{{ next }}">
 </form>
 
-{# Assumes you set up the password_reset view in your URLconf #}
-<p><a href="{% url 'password_reset' %}">Lost password?</a></p>
 
 {% endblock %}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>404 exception handler</title>
+        {% load static %}
+        <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+    </head>
+    <body>
+        <strong>404 Error</strong>
+        <br>
+        You have encountered a 404 error, did you try to access a page that doesn't exist?
+        <br>
+        <p><a href="{% url 'home' %}"> Return to home page? </a></p>
+    </body>
+</html>

@@ -16,9 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
     path("", include("experimentation.urls")),
     path('admin/', admin.site.urls),
+        path(
+        "accounts/logout/",
+        LogoutView.as_view(template_name="registration/logout.html"),
+        name="logout",
+    ),
     path("accounts/", include("django.contrib.auth.urls")),
 ]
+handler404 = "experimentation.views.error_404"
